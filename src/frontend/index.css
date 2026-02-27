@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   CITY PHARMA - MEDICAL DESIGN SYSTEM
+   Trust-driven, clinical, premium medical brand
+   Primary: Red, Background: Near-Black, Accent: Blue
+   ============================================ */
+
+@layer base {
+  :root {
+    /* Medical Red (#DC2626) → OKLCH: L=0.537 C=0.207 H=25.1 */
+    /* Medical Blue (#1E40AF) → OKLCH: L=0.37 C=0.18 H=264.4 */
+    /* Near Black (#0F0F0F) → OKLCH: L=0.09 C=0 H=0 */
+
+    --radius: 0.5rem;
+
+    /* Dark medical theme */
+    --background: 0.09 0 0;
+    --foreground: 0.97 0.002 240;
+
+    --card: 0.12 0.002 240;
+    --card-foreground: 0.97 0.002 240;
+
+    --popover: 0.14 0.002 240;
+    --popover-foreground: 0.97 0.002 240;
+
+    /* Red as primary */
+    --primary: 0.537 0.207 25.1;
+    --primary-foreground: 0.98 0 0;
+
+    /* Deep navy secondary */
+    --secondary: 0.18 0.004 240;
+    --secondary-foreground: 0.97 0.002 240;
+
+    /* Muted dark */
+    --muted: 0.18 0.002 240;
+    --muted-foreground: 0.6 0.008 240;
+
+    /* Blue accent */
+    --accent: 0.37 0.18 264.4;
+    --accent-foreground: 0.97 0.002 240;
+
+    /* Destructive red */
+    --destructive: 0.537 0.207 25.1;
+    --destructive-foreground: 0.98 0 0;
+
+    /* Borders */
+    --border: 0.22 0.004 240;
+    --input: 0.18 0.004 240;
+    --ring: 0.537 0.207 25.1;
+
+    /* Charts */
+    --chart-1: 0.537 0.207 25.1;
+    --chart-2: 0.45 0.16 264.4;
+    --chart-3: 0.65 0.12 150;
+    --chart-4: 0.75 0.12 80;
+    --chart-5: 0.55 0.1 200;
+
+    /* Sidebar */
+    --sidebar: 0.11 0 0;
+    --sidebar-foreground: 0.97 0.002 240;
+    --sidebar-primary: 0.537 0.207 25.1;
+    --sidebar-primary-foreground: 0.98 0 0;
+    --sidebar-accent: 0.18 0.004 240;
+    --sidebar-accent-foreground: 0.97 0.002 240;
+    --sidebar-border: 0.22 0.004 240;
+    --sidebar-ring: 0.537 0.207 25.1;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Outfit", "Plus Jakarta Sans", system-ui, sans-serif;
+    background-color: oklch(0.09 0 0);
+    color: oklch(0.97 0.002 240);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ============================================
+   ECG & MEDICAL ANIMATIONS
+   ============================================ */
+@keyframes ecg-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes float-icon-1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+  50% { transform: translateY(-18px) rotate(5deg); opacity: 0.9; }
+}
+
+@keyframes float-icon-2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.5; }
+  50% { transform: translateY(-14px) rotate(-5deg); opacity: 0.8; }
+}
+
+@keyframes float-icon-3 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.4; }
+  50% { transform: translateY(-22px) rotate(8deg); opacity: 0.7; }
+}
+
+@keyframes delivery-bike {
+  0% { transform: translateX(-150px); }
+  100% { transform: translateX(calc(100vw + 150px)); }
+}
+
+@keyframes sonar-ring {
+  0% { transform: scale(0); opacity: 0.8; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 8px oklch(0.537 0.207 25.1 / 0.3); }
+  50% { box-shadow: 0 0 25px oklch(0.537 0.207 25.1 / 0.7); }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.1); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.07); }
+  56% { transform: scale(1); }
+}
+
+@keyframes slide-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes whatsapp-bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.float-1 { animation: float-icon-1 4s ease-in-out infinite; }
+.float-2 { animation: float-icon-2 5s ease-in-out infinite 0.8s; }
+.float-3 { animation: float-icon-3 6s ease-in-out infinite 1.6s; }
+.float-4 { animation: float-icon-1 4.5s ease-in-out infinite 2.4s; }
+.float-5 { animation: float-icon-2 5.5s ease-in-out infinite 3.2s; }
+
+.pulse-ring { animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
+.glow-red { animation: glow-pulse 2s ease-in-out infinite; }
+.heartbeat { animation: heartbeat 1.5s ease-in-out infinite; }
+.delivery-animate { animation: delivery-bike 10s linear infinite; }
+.sonar-animate { animation: sonar-ring 2.5s ease-out infinite; }
+.whatsapp-animate { animation: whatsapp-bounce 2s ease-in-out infinite; }
+
+/* ECG line scrolling animation */
+.ecg-scroll { animation: ecg-scroll 8s linear infinite; }
+
+/* Medical gradient backgrounds */
+.hero-bg {
+  background: 
+    radial-gradient(ellipse 80% 60% at 15% 50%, oklch(0.537 0.207 25.1 / 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 60% at 85% 50%, oklch(0.37 0.18 264.4 / 0.08) 0%, transparent 70%),
+    oklch(0.09 0 0);
+}
+
+.card-hover-glow:hover {
+  box-shadow: 0 0 0 1px oklch(0.537 0.207 25.1 / 0.4), 
+              0 8px 32px oklch(0.537 0.207 25.1 / 0.15);
+}
+
+.red-gradient-text {
+  background: linear-gradient(135deg, oklch(0.65 0.18 25.1) 0%, oklch(0.537 0.207 25.1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Input override for dark theme */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+textarea,
+select {
+  color-scheme: dark;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: oklch(0.11 0 0); }
+::-webkit-scrollbar-thumb { background: oklch(0.537 0.207 25.1 / 0.4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: oklch(0.537 0.207 25.1 / 0.7); }
+
+/* Status badges */
+.badge-pending { background: oklch(0.65 0.15 60 / 0.15); color: oklch(0.75 0.15 60); border: 1px solid oklch(0.65 0.15 60 / 0.3); }
+.badge-confirmed { background: oklch(0.65 0.15 142 / 0.15); color: oklch(0.7 0.15 142); border: 1px solid oklch(0.65 0.15 142 / 0.3); }
+.badge-completed { background: oklch(0.45 0.16 264.4 / 0.15); color: oklch(0.6 0.14 264.4); border: 1px solid oklch(0.45 0.16 264.4 / 0.3); }
+.badge-cancelled { background: oklch(0.537 0.207 25.1 / 0.15); color: oklch(0.65 0.18 25.1); border: 1px solid oklch(0.537 0.207 25.1 / 0.3); }

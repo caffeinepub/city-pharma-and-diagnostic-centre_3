@@ -1,0 +1,67 @@
+export interface Medicine {
+  id: number;
+  brand: string;
+  generic: string;
+  strength: string;
+  manufacturer: string;
+  prescriptionRequired: boolean;
+  inStock: boolean;
+}
+
+export const medicines: Medicine[] = [
+  { id: 1, brand: "Dolo 650", generic: "Paracetamol", strength: "650mg", manufacturer: "Micro Labs", prescriptionRequired: false, inStock: true },
+  { id: 2, brand: "Crocin Advance", generic: "Paracetamol", strength: "500mg", manufacturer: "GSK", prescriptionRequired: false, inStock: true },
+  { id: 3, brand: "Azithral 500", generic: "Azithromycin", strength: "500mg", manufacturer: "Alembic", prescriptionRequired: true, inStock: true },
+  { id: 4, brand: "Amoxil 500", generic: "Amoxicillin", strength: "500mg", manufacturer: "GSK", prescriptionRequired: true, inStock: true },
+  { id: 5, brand: "Augmentin 625", generic: "Amoxicillin + Clavulanate", strength: "625mg", manufacturer: "GSK", prescriptionRequired: true, inStock: true },
+  { id: 6, brand: "Metformin 500", generic: "Metformin HCl", strength: "500mg", manufacturer: "Sun Pharma", prescriptionRequired: true, inStock: true },
+  { id: 7, brand: "Glycomet 1g", generic: "Metformin HCl", strength: "1000mg", manufacturer: "USV", prescriptionRequired: true, inStock: true },
+  { id: 8, brand: "Atorva 10", generic: "Atorvastatin", strength: "10mg", manufacturer: "Zydus", prescriptionRequired: true, inStock: true },
+  { id: 9, brand: "Lipitor 20", generic: "Atorvastatin", strength: "20mg", manufacturer: "Pfizer", prescriptionRequired: true, inStock: true },
+  { id: 10, brand: "Telma 40", generic: "Telmisartan", strength: "40mg", manufacturer: "Glenmark", prescriptionRequired: true, inStock: true },
+  { id: 11, brand: "Amlodac 5", generic: "Amlodipine", strength: "5mg", manufacturer: "Zydus", prescriptionRequired: true, inStock: true },
+  { id: 12, brand: "Stamlo 10", generic: "Amlodipine", strength: "10mg", manufacturer: "Dr Reddy's", prescriptionRequired: true, inStock: true },
+  { id: 13, brand: "Pan 40", generic: "Pantoprazole", strength: "40mg", manufacturer: "Alkem", prescriptionRequired: true, inStock: true },
+  { id: 14, brand: "Omez 20", generic: "Omeprazole", strength: "20mg", manufacturer: "Dr Reddy's", prescriptionRequired: false, inStock: true },
+  { id: 15, brand: "Rantac 150", generic: "Ranitidine", strength: "150mg", manufacturer: "J.B. Chemicals", prescriptionRequired: false, inStock: true },
+  { id: 16, brand: "Mox 500", generic: "Amoxicillin", strength: "500mg", manufacturer: "Ranbaxy", prescriptionRequired: true, inStock: true },
+  { id: 17, brand: "Ciproflox 500", generic: "Ciprofloxacin", strength: "500mg", manufacturer: "Cipla", prescriptionRequired: true, inStock: true },
+  { id: 18, brand: "Levoflox 500", generic: "Levofloxacin", strength: "500mg", manufacturer: "Sun Pharma", prescriptionRequired: true, inStock: true },
+  { id: 19, brand: "Metrogyl 400", generic: "Metronidazole", strength: "400mg", manufacturer: "J.B. Chemicals", prescriptionRequired: true, inStock: true },
+  { id: 20, brand: "Zenflox 200", generic: "Ofloxacin", strength: "200mg", manufacturer: "Sun Pharma", prescriptionRequired: true, inStock: true },
+  { id: 21, brand: "Taxim-O 200", generic: "Cefixime", strength: "200mg", manufacturer: "Alkem", prescriptionRequired: true, inStock: true },
+  { id: 22, brand: "Monocef 1g", generic: "Ceftriaxone", strength: "1g", manufacturer: "Aristo", prescriptionRequired: true, inStock: true },
+  { id: 23, brand: "Montair-LC", generic: "Montelukast + Levocetirizine", strength: "10mg+5mg", manufacturer: "Cipla", prescriptionRequired: true, inStock: true },
+  { id: 24, brand: "Allegra 120", generic: "Fexofenadine", strength: "120mg", manufacturer: "Sanofi", prescriptionRequired: false, inStock: true },
+  { id: 25, brand: "Cetrizine 10", generic: "Cetirizine", strength: "10mg", manufacturer: "Cipla", prescriptionRequired: false, inStock: true },
+  { id: 26, brand: "Avil 25", generic: "Pheniramine Maleate", strength: "25mg", manufacturer: "Sanofi", prescriptionRequired: false, inStock: true },
+  { id: 27, brand: "Asthalin 100", generic: "Salbutamol", strength: "100mcg", manufacturer: "Cipla", prescriptionRequired: true, inStock: true },
+  { id: 28, brand: "Budecort 400", generic: "Budesonide", strength: "400mcg", manufacturer: "Cipla", prescriptionRequired: true, inStock: true },
+  { id: 29, brand: "Foracort 400", generic: "Formoterol + Budesonide", strength: "400mcg", manufacturer: "Cipla", prescriptionRequired: true, inStock: true },
+  { id: 30, brand: "Becosules", generic: "Multivitamin + B-Complex", strength: "Standard", manufacturer: "Pfizer", prescriptionRequired: false, inStock: true },
+  { id: 31, brand: "Revital H", generic: "Multivitamin + Minerals", strength: "Standard", manufacturer: "Sun Pharma", prescriptionRequired: false, inStock: true },
+  { id: 32, brand: "Shelcal 500", generic: "Calcium + Vitamin D3", strength: "500mg + 250IU", manufacturer: "Torrent", prescriptionRequired: false, inStock: true },
+  { id: 33, brand: "Calcirol Sachet", generic: "Vitamin D3", strength: "60000IU", manufacturer: "Cadila", prescriptionRequired: true, inStock: true },
+  { id: 34, brand: "Ferium XT", generic: "Ferrous Ascorbate + Folic Acid", strength: "100mg + 1.5mg", manufacturer: "Meyer Organics", prescriptionRequired: true, inStock: true },
+  { id: 35, brand: "Orofer-S", generic: "Iron Sucrose", strength: "100mg/5ml", manufacturer: "Emcure", prescriptionRequired: true, inStock: false },
+  { id: 36, brand: "Glucon-D", generic: "Glucose Powder", strength: "Standard", manufacturer: "Heinz", prescriptionRequired: false, inStock: true },
+  { id: 37, brand: "ORS Electral", generic: "ORS Powder", strength: "Standard", manufacturer: "Franco Indian", prescriptionRequired: false, inStock: true },
+  { id: 38, brand: "Normet 400", generic: "Metronidazole + Norfloxacin", strength: "400mg+400mg", manufacturer: "Alkem", prescriptionRequired: true, inStock: true },
+  { id: 39, brand: "Cifran 500", generic: "Ciprofloxacin", strength: "500mg", manufacturer: "Ranbaxy", prescriptionRequired: true, inStock: true },
+  { id: 40, brand: "Niftas 100", generic: "Nitrofurantoin", strength: "100mg", manufacturer: "Elder", prescriptionRequired: true, inStock: true },
+  { id: 41, brand: "Sporanox 100", generic: "Itraconazole", strength: "100mg", manufacturer: "Janssen", prescriptionRequired: true, inStock: true },
+  { id: 42, brand: "Fluconazole 150", generic: "Fluconazole", strength: "150mg", manufacturer: "Cipla", prescriptionRequired: true, inStock: true },
+  { id: 43, brand: "Volini Gel", generic: "Diclofenac + Methyl Salicylate", strength: "Topical", manufacturer: "Ranbaxy", prescriptionRequired: false, inStock: true },
+  { id: 44, brand: "Combiflam", generic: "Ibuprofen + Paracetamol", strength: "400mg+325mg", manufacturer: "Sanofi", prescriptionRequired: false, inStock: true },
+  { id: 45, brand: "Brufen 400", generic: "Ibuprofen", strength: "400mg", manufacturer: "Abbott", prescriptionRequired: false, inStock: true },
+  { id: 46, brand: "Voveran 50", generic: "Diclofenac Sodium", strength: "50mg", manufacturer: "Novartis", prescriptionRequired: true, inStock: true },
+  { id: 47, brand: "Tramadol 50", generic: "Tramadol HCl", strength: "50mg", manufacturer: "German Remedies", prescriptionRequired: true, inStock: true },
+  { id: 48, brand: "Calpol 500", generic: "Paracetamol", strength: "500mg", manufacturer: "GSK", prescriptionRequired: false, inStock: true },
+  { id: 49, brand: "Glyciphage SR 500", generic: "Metformin HCl", strength: "500mg SR", manufacturer: "Franco Indian", prescriptionRequired: true, inStock: true },
+  { id: 50, brand: "Januvia 100", generic: "Sitagliptin", strength: "100mg", manufacturer: "MSD", prescriptionRequired: true, inStock: true },
+  { id: 51, brand: "Galvus Met 50/500", generic: "Vildagliptin + Metformin", strength: "50mg+500mg", manufacturer: "Novartis", prescriptionRequired: true, inStock: true },
+  { id: 52, brand: "Losartan 50", generic: "Losartan Potassium", strength: "50mg", manufacturer: "Sun Pharma", prescriptionRequired: true, inStock: true },
+  { id: 53, brand: "Ecosprin 75", generic: "Aspirin", strength: "75mg", manufacturer: "USV", prescriptionRequired: false, inStock: true },
+  { id: 54, brand: "Clopivas 75", generic: "Clopidogrel", strength: "75mg", manufacturer: "Cipla", prescriptionRequired: true, inStock: true },
+  { id: 55, brand: "Rosuvast 10", generic: "Rosuvastatin", strength: "10mg", manufacturer: "Dr Reddy's", prescriptionRequired: true, inStock: true },
+];
